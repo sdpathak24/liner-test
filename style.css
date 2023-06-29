@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+}
+
+.timeline-Heading-input {
+  width: 100%;
+  height: 70px;
+  font-size: 50px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.timeline-Heading-input:focus {
+  outline: none;
+}
+
+.timeline-container {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 50px;
+}
+
+.timeline {
+  position: relative;
+  padding: 10px 20px;
+  margin-left: 50px;
+  border-left: 2px solid #ccc;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -7px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-right: 7px solid #ccc;
+  border-bottom: 7px solid transparent;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 8px solid #fff;
+  border-bottom: 8px solid transparent;
+}
+
+.timeline > * {
+  margin-bottom: 10px;
+}
+
+.timeline li {
+  list-style: none;
+}
+
+.timeline-entry {
+  position: relative;
+}
+
+.timeline-date {
+  position: absolute;
+  top: 0;
+  left: -100px;
+}
+
+.timeline-entry img {
+  max-width: 80%;
+  max-height: calc(100vh - 200px); /* adjust this value as needed */
+}
+
+#add-entry-btn {
+  position: fixed;
+  bottom: 60px;
+  /* top: 50%; */
+  right: 50px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

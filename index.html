@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Timeline</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="timeline-Heading">
+      <input
+        type="text"
+        placeholder="add Title to your timeline"
+        id="TimelineHeading"
+        class="timeline-Heading-input"
+        autofocus
+      />
+    </div>
+    <div class="timeline-container">
+      <div class="timeline"></div>
+    </div>
+    <button id="add-entry-btn">Add Entry</button>
+    <div id="add-entry-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="add-entry-form">
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" required /><br />
+
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required /><br />
+
+          <label for="text">Text:</label>
+          <textarea id="text" name="text"></textarea><br />
+
+          <label for="image">Image:</label>
+          <input type="file" accept="image/*" id="image" name="image" /><br />
+
+          <input type="submit" value="Add" />
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
